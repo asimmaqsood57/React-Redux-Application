@@ -24,8 +24,7 @@ export default function ProductComponent() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Card.Text>Price : {price}</Card.Text>
-            <Card.Text>Price : {price}</Card.Text>
+            <Card.Text>Price : {price}$</Card.Text>
             <Card.Text>category : {category}</Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
