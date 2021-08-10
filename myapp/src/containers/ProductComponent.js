@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Container } from "react-bootstrap";
 import { Card } from "react-bootstrap";
@@ -16,14 +17,22 @@ export default function ProductComponent() {
     return (
       <Col>
         {" "}
-        <Card style={{ width: "18rem" }} key={id}>
-          <Card.Img variant="top" title={title} src={image} />
+        <Card
+          className="m-3"
+          style={{ width: "18rem", height: "30rem" }}
+          key={id}
+        >
+          <Card.Img
+            variant="top"
+            width="171px"
+            height="180px"
+            title={title}
+            src={`${image}`}
+          />
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Link to={`/product/${id}`}>
+              <Card.Title>{title}</Card.Title>
+            </Link>
             <Card.Text>Price : {price}$</Card.Text>
             <Card.Text>category : {category}</Card.Text>
             <Button variant="primary">Go somewhere</Button>
